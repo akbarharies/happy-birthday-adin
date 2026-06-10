@@ -2,28 +2,31 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+    -webkit-tap-hightlight-color:transparent;
 }
 
 
 body{
 
-    background:#000;
+    margin:0;
     display:flex;
     justify-content:center;
     align-items:center;
     min-height:100vh;
     overflow:hidden;
-    font-family:'Comic Neue', cursive;
+    font-family:'Comic Relief', cursive;
+    touch-action:manipulation;
 }
 
 
 #app{
 
-    width:412px;
-    height:917px;
-    position:relative;
+    width:100vw;
+    height:100vh;
+    max-width:412px;
+    max-height:917px;
+    margin:auto;
     overflow:hidden;
-    background:#000;
 }
 
 
