@@ -358,10 +358,10 @@ body{
 .snoopy-flower{
 
     position:absolute;
-    width:62%;
-    max-width:300px;
+    width:68%;
+    max-width:320px;
     left:50%;
-    bottom:8%;
+    bottom:5%;
     transform:translateX(-50%);
     animation:sleepFloat 3s ease-in-out infinite;
 }
