@@ -12,32 +12,26 @@ body{
     overflow:hidden;
     font-family:'Comic Relief', cursive;
     touch-action:manipulation;
+    width:100vw;
+    height:100dvh;
 }
 
 
 #app{
 
     position:relative;
-    width:min(
-        100vw,
-        calc(100dvh * 412 / 917)
-    );
-
-    height:min(
-        100dvh,
-        calc(100vw * 917 / 412)
-    );
-
+    width:100%;
+    height:100dvh;
     overflow:hidden;
-    margin:auto;
 }
 
 
 .slide{
 
     position:relative;
-    width:100%;
-    height:100%;
+    width:100vw;
+    height:100dvh;
+    overflow:hidden;
 }
 
 
@@ -48,6 +42,7 @@ body{
     width:100%;
     height:100%;
     object-fit:cover;
+    object-position:center;
 }
 
 
