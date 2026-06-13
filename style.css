@@ -95,8 +95,8 @@ body{
 
     position:absolute;
     width:58%;
-    left:20%;
-    top:20%;
+    left:18%;
+    top:18%;
     z-index:5;
     animation:sleepFloat 3s ease-in-out infinite;
 }
