@@ -259,7 +259,7 @@ body{
     position:absolute;
     width:38%;
     max-width:220px;
-    top:3%;
+    top:1%;
     left:4%;
     animation:moonGlow 3s infinite;
 }
