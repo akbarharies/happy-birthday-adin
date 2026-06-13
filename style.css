@@ -347,9 +347,10 @@ body{
 .moon3{
 
     position:absolute;
-    width:140px;
-    top:40px;
-    left:20px;
+    width:34%;
+    max-width:180px;
+    top:5%;
+    left:5%;
     animation:moonGlow 3s infinite;
 }
 
@@ -357,37 +358,19 @@ body{
 .snoopy-flower{
 
     position:absolute;
-    width:280px;
-    bottom:70px;
-    left:10px;
-    animation:sleepFloat 3s ease-in-out infinite;
-}
-
-
-.special-title{
-
-    position:absolute;
-    top:50%;
+    width:62%;
+    max-width:300px;
     left:50%;
-    transform:translate(-50%,-50%);
-    width:170px;
-    text-align:center;
-    color:black;
-    font-size:18px;
-    font-weight:bold;
-    line-height:1.2;
-    text-shadow:
-    0 0 5px white,
-    0 0 15px white;
-    z-index:5;
-    pointer-events:none;
+    bottom:8%;
+    transform:translateX(-50%);
+    animation:sleepFloat 3s ease-in-out infinite;
 }
 
 
 .note-button{
 
     position:absolute;
-    top:150px;
+    top:16%;
     left:50%;
     transform:translateX(-50%);
     cursor:pointer;
@@ -397,39 +380,71 @@ body{
 
 .note-img{
 
-    width:220px;
+    width:52vw;
+    max-width:240px;
+}
+
+
+.special-title{
+
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:72%;
+    text-align:center;
+    color:black;
+    font-size:clamp(14px,2.3vh,22px);
+    font-weight:700;
+    line-height:1.25;
+    text-shadow:
+    0 0 5px white,
+    0 0 15px white;
+    z-index:5;
+    pointer-events:none;
 }
 
 
 #reasonsContainer{
 
     position:absolute;
-    top:320px;
+    top:36%;
     width:100%;
     display:flex;
     flex-direction:column;
     align-items:center;
-    gap:15px;
+    gap:1.8vh;
+    padding:0 5%;
 }
 
 
 .reason-card{
 
-    width:320px;
+    width:86%;
+    max-width:340px;
     background:white;
     color:#444;
-    padding:15px;
-    border-radius:25px;
+    padding:1rem;
+    border-radius:24px;
     text-align:center;
-    font-size:18px;
+    font-size:clamp(14px,2vh,18px);
     animation:cardPop .5s ease;
+}
+
+
+.slide3-next{
+
+    position:absolute;
+    left:50% !important;
+    bottom:4%;
+    transform:translateX(-50%);
 }
 
 
 @keyframes cardPop{
 
     0%{
-        transform:scale(0);
+        transform:scale(.8);
         opacity:0;
     }
 
@@ -437,29 +452,6 @@ body{
         transform:scale(1);
         opacity:1;
     }
-}
-
-
-.fade-in{
-
-    animation:fadeIn 4s ease;
-}
-
-
-@keyframes fadeIn{
-    from{
-        opacity:0;
-    }
-    to{
-        opacity:1;
-    }
-}
-
-
-.slide3-next{
-
-    left:78% !important;
-    
 }
 
 
