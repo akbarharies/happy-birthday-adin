@@ -82,8 +82,8 @@ body{
 .moon{
 
     position:absolute;
-    top:8%;
-    left:4%;
+    top:6%;
+    left:10%;
     width:75%;
     max-width:420px;
     z-index:1;
