@@ -347,9 +347,9 @@ body{
 .moon3{
 
     position:absolute;
-    width:34%;
-    max-width:180px;
-    top:5%;
+    width:32%;
+    max-width:150px;
+    top:4%;
     left:5%;
     animation:moonGlow 3s infinite;
 }
@@ -358,11 +358,10 @@ body{
 .snoopy-flower{
 
     position:absolute;
-    width:62%;
-    max-width:300px;
-    left:50%;
-    bottom:6%;
-    transform:translateX(-50%);
+    width:66%;
+    max-width:320px;
+    bottom:2%;     /* bawahin lagi */
+    left:3%;       /* geser ke kiri */
     animation:sleepFloat 3s ease-in-out infinite;
 }
 
@@ -381,7 +380,7 @@ body{
 .note-img{
 
     width:52vw;
-    max-width:240px;
+    max-width:220px;
 }
 
 
@@ -391,15 +390,17 @@ body{
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
-    width:72%;
+    width:42%;
     text-align:center;
     color:black;
-    font-size:clamp(14px,2.3vh,22px);
-    font-weight:700;
-    line-height:1.25;
+    font-size:clamp(15px,2vw,20px);
+    font-weight:bold;
+    line-height:1.2;
     text-shadow:
-    0 0 5px white,
-    0 0 15px white;
+        0 0 5px white,
+        0 0 15px white;
+
+
     z-index:5;
     pointer-events:none;
 }
@@ -408,50 +409,36 @@ body{
 #reasonsContainer{
 
     position:absolute;
-    top:36%;
+    top:35%;
     width:100%;
     display:flex;
     flex-direction:column;
     align-items:center;
-    gap:1.8vh;
-    padding:0 5%;
+    gap:2vh;
 }
 
 
 .reason-card{
 
-    width:86%;
-    max-width:340px;
+    width:78%;
+    max-width:320px;
     background:white;
     color:#444;
-    padding:1rem;
-    border-radius:24px;
+    padding:14px;
+    border-radius:25px;
     text-align:center;
-    font-size:clamp(14px,2vh,18px);
+    font-size:clamp(15px,2vw,18px);
     animation:cardPop .5s ease;
 }
 
 
 .slide3-next{
 
-    position:absolute;
-    left:50% !important;
-    bottom:4%;
-    transform:translateX(-50%);
-}
-
-
-@keyframes cardPop{
-
-    0%{
-        transform:scale(.8);
-        opacity:0;
-    }
-
-    100%{
-        transform:scale(1);
-        opacity:1;
-    }
+    position:absolute !important;
+    right:6% !important;   /* tombol ke kanan */
+    left:auto !important;
+    bottom:9% !important;
+    transform:none !important;
 }
 
 
