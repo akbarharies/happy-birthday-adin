@@ -463,10 +463,8 @@ function showReasons(){
 
     const container =
     document.getElementById(
-    "reasonsContainer"
+        "reasonsContainer"
     );
-
-    if(!container) return;
 
     container.innerHTML="";
 
@@ -480,8 +478,11 @@ function showReasons(){
 
     ];
 
-    reasons.forEach(
-    (text,index)=>{
+    for(
+        let i=0;
+        i<reasons.length;
+        i++
+    ){
 
     setTimeout(()=>{
 
@@ -490,19 +491,20 @@ function showReasons(){
     "div"
     );
 
-    card.className=
-    "reason-card";
+    card.classList.add(
+        "reason-card"
+    );
 
-    card.innerHTML=
-    text;
+    card.textContent=
+    reasons[i];
 
     container.appendChild(
     card
     );
 
-    }, index*600);
+    }, i*700);
 
-    });
+    }
 
 }
 
