@@ -505,9 +505,9 @@ body{
     position:absolute;
     width:46vw;
     max-width:230px;
-    left:0;
-    bottom:4%;
     height:auto;
+    left:5%;
+    bottom:-2%;
     z-index:2;
     animation:sleepFloat 3s ease-in-out infinite;
 
