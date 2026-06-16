@@ -2,12 +2,6 @@ let score = 0;
 
 let gameStarted = False;
 
-let snoopy = null;
-
-let isDragging = false;
-
-let offsetX = 0;
-
 
 
 function startHeartGame(){
@@ -16,15 +10,29 @@ function startHeartGame(){
 
     gameStarted = true;
 
+    const note =
     document
-    .getElementById("startNote")
-    .classList
-    .add("game-hidden");
+    .getElementById(
+        "startNote"
+    );
 
+    const title =
     document
-    .getElementById("gameTitle")
-    .classList
-    .add("game-hidden");
+    .getElementById(
+        "gameTitle"
+    );
+
+    if(note){
+
+        note.style.display =
+        "none";
+    }
+
+    if(title){
+
+        title.style.display =
+        "none";
+    }
 
     spawnHeart();
 
@@ -32,61 +40,69 @@ function startHeartGame(){
 
 
 function spawnHeart(){
-    
-    if(score>=10) return;
-    
+
+    if(score>=10){
+        return;
+    }
+
     const container =
-    document
-    .getElementById(
-    "heartContainer"
+    document.getElementById(
+        "heartContainer"
     );
 
-    const heart =
-    document
-    .createElement("img");
+    if(!container){
 
-    const number =
+        return;
+
+    }
+
+    const heart =
+    document.createElement(
+        "img"
+    );
+
+    const random =
     Math.floor(
-    Math.random()*4
+        Math.random()*4
     )+1;
 
     heart.src =
-    `assets/icons/heart${number}.png`;
+    `assets/icons/heart${random}.png`;
 
     heart.className =
     "heart";
 
     heart.style.left =
-    Math.random()*80
+    Math.random()*75
     +"%";
 
     container
     .appendChild(
-    heart
+        heart
     );
 
-    checkCatch(
-    heart
+    watchHeart(
+        heart
     );
 
     setTimeout(()=>{
 
-    spawnHeart();
+        spawnHeart();
 
     },
-    800+
-    Math.random()*1200
-    );
+
+    1000);
 
     heart.addEventListener(
-    "animationend",
+        "animationend",
     ()=>{
 
-    heart.remove();
+        heart.remove();
 
     });
 
 }
+
 
 
 
@@ -98,7 +114,7 @@ function checkCatch(heart){
         if(!heart.parentNode){
 
             clearInterval(
-            loop
+                loop
             );
 
             return;
@@ -233,3 +249,73 @@ function moveSnoopy(e){
     x + "px";
 
 }
+
+
+function watchHeart(heart){
+
+    const interval =
+    setInterval(()=>{
+
+        if(!heart.parentNode){
+
+            clearInterval(
+            interval
+            );
+
+            return;
+
+        }
+
+        const heartRect =
+        heart
+        .getBoundingClientRect();
+
+        const snoopyRect =
+        document
+        .querySelector(
+            ".snoopy-net"
+        )
+        .getBoundingClientRect();
+
+        const hit =
+
+        heartRect.bottom
+        >=
+        snoopyRect.top
+
+        &&
+
+        heartRect.left
+        <
+        snoopyRect.right
+
+        &&
+
+        heartRect.right
+        >
+        snoopyRect.left;
+
+        if(hit){
+
+            heart.remove();
+
+            score++;
+
+            document
+            .getElementById(
+                "heartCounter"
+            )
+
+           .innerHTML=
+
+            `❤️ ${score}/10`;
+
+            clearInterval(
+            interval);
+
+        }
+
+    },80);
+
+}
+
