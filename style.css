@@ -373,6 +373,8 @@ body{
     left:50%;
     transform:translateX(-50%);
     cursor:pointer;
+    z-index:100;
+    pointer-events:auto;
     animation:pulseBtn 2s infinite;
 }
 
@@ -415,7 +417,7 @@ body{
     flex-direction:column;
     align-items:center;
     gap:2vh;
-    animation:pulseBtn 2s infinite;
+    pointer-events:none;
 }
 
 
@@ -430,11 +432,12 @@ body{
     text-align:center;
     font-size:clamp(15px,4vw,18px);
     transform-origin:center;
-    animation:cardPop .7s cubic-bezier(.18,.89,.32,1.28);
     box-shadow:
         0 8px 30px rgba(0,0,0,.12);
     opacity:0;
-    animation:pulseBtn 2s infinite;
+    animation:
+        cardpop .7s cubic-bezier(.18,.89,.32,1.28)
+        forwards;
 }
 
 
