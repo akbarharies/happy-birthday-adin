@@ -503,8 +503,8 @@ body{
 .snoopy-camera{
     
     position:absolute;
-    width:46vw;
-    max-width:230px;
+    width:54vw;
+    max-width:280px;
     height:auto;
     left:7%;
     bottom:-3%;
@@ -618,7 +618,7 @@ body{
     
     position:absolute;
     left:6%;
-    top:44%;
+    top:39%;
     width:42vw;
     max-width:180px;
     height:auto;
@@ -675,7 +675,7 @@ body{
 .photo3{
     
     left:7%;
-    top:5%;
+    top:2%;
     width:86%;
     height:75%;
     object-fit:cover;
