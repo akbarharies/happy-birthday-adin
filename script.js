@@ -478,35 +478,32 @@ function showReasons(){
 
     ];
 
-    for(
-        let i=0;
-        i<reasons.length;
-        i++
-    ){
+    reasons.forEach(
 
-    setTimeout(()=>{
+        (text,index)=>{
 
-    const card=
-    document.createElement(
-    "div"
-    );
+        setTimeout(()=>{
+        
+        const card=
+        document.createElement(
+        "div"
+        );
 
-    card.classList.add(
-        "reason-card"
-    );
+        card.className=
+            "reason-card";
 
-    card.textContent=
-    reasons[i];
+        card.innerHTML=
+        text;
+    
+        container.appendChild(
+        card
+        );
 
-    container.appendChild(
-    card
-    );
+        }, index*700);
 
-    }, i*700);
+        });
 
     }
-
-}
 
 loadSlide();
 
