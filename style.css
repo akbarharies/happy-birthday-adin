@@ -811,7 +811,7 @@ body{
     height:auto;
     left:50%;
     top:54%;
-    transform:translateX(-40%);
+    transform:translate(-50%,0);
     z-index:2;
     animation:sleepFloat 3s ease-in-out infinite;
 
