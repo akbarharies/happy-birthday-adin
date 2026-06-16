@@ -1142,3 +1142,87 @@ body{
 
     place-items:center;
 }
+
+
+#heartContainer{
+
+
+    position:absolute;
+
+
+    width:100%;
+
+
+    height:100%;
+
+
+    left:0;
+
+
+    top:0;
+
+
+}
+
+
+
+.heart{
+
+
+    position:absolute;
+
+
+    width:14%;
+
+
+    z-index:50;
+
+
+    pointer-events:none;
+
+
+    animation:
+    heartFall 5s linear;
+}
+
+
+
+
+@keyframes heartFall{
+
+
+0%{
+
+
+top:-10%;
+
+
+}
+
+
+100%{
+
+
+top:110%;
+
+
+}
+
+
+}
+
+
+
+
+.game-hidden{
+
+
+    opacity:0;
+
+
+    pointer-events:none;
+
+
+    transition:.5s;
+}
+

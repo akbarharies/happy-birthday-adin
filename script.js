@@ -341,13 +341,17 @@ function loadSlide(){
             class="bg"
             src="assets/backgrounds/slide6-bg.png">
 
-            <div class="game-title">
+            <div
+            class="game-title"
+            id="gameTitle">
 
                 Catch The Hearts
 
             </div>
 
-            <div class="heart-counter">
+            <div
+            class="heart-counter"
+            id="heartCounter">
 
                 ❤️ 0 / 10
 
@@ -355,6 +359,7 @@ function loadSlide(){
 
             <div
             class="start-note"
+            id="startNote"
             onclick="startHeartGame()">
 
                 <div class="note-title">
@@ -395,6 +400,11 @@ function loadSlide(){
                     NEXT
 
                 </span>
+
+            </div>
+
+            <div
+            id="heartContainer">
 
             </div>
 
