@@ -782,7 +782,7 @@ body{
 
     position:absolute;
     left:50%;
-    top:49%;
+    top:44%;
     transform:translateX(-50%);
     width:90%;
     text-align:center;
@@ -810,8 +810,8 @@ body{
     max-width:210px;
     height:auto;
     left:50%;
-    top:56%;
-    transform:translateX(-50%);
+    top:54%;
+    transform:translateX(-40%);
     z-index:2;
     animation:sleepFloat 3s ease-in-out infinite;
 
