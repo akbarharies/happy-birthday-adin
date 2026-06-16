@@ -392,15 +392,18 @@ body{
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
-    width:42%;
+    width:68%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     text-align:center;
     color:black;
-    font-size:clamp(15px,2vw,20px);
-    font-weight:bold;
-    line-height:1.2;
+    font-size:clamp(12px,2.2vh,18px);
+    font-weight:700;
+    line-height:1.25;
     text-shadow:
         0 0 5px white,
-        0 0 15px white;
+        0 0 12px white;
 
 
     z-index:5;
@@ -412,7 +415,11 @@ body{
     
     position:absolute;
 
-    top:35%;
+    top:34%;
+
+    left:50%;
+
+    transform:translateX(-50%);
 
     width:100%;
 
@@ -422,32 +429,39 @@ body{
 
     align-items:center;
 
-    gap:15px;
+    gap:1.6vh;
 
-    z-index:20;
+    z-index:30;
 
 }
 
 
 .reason-card{
     
-    width:78%;
+    width:min(72vw,280px);
 
-    max-width:320px;
+    min-height:48px;
 
     background:white;
 
     color:#444;
 
-    padding:15px;
+    padding:12px 16px;
 
-    border-radius:25px;
+    border-radius:22px;
 
     text-align:center;
 
-    font-size:18px;
+    font-size:clamp(12px,1.9vh,17px);
+
+    line-height:1.4;
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,.10);
 
     animation:cardPop .5s ease;
+
+    word-break:break-word;
 
 }
 
