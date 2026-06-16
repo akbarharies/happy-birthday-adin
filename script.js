@@ -147,7 +147,7 @@ function loadSlide(){
             src="assets/buttons/note.png">
 
             <span class="special-title">
-                Why You're Special 🤍
+                reasons why You're Special 🤍
             </span>
 
             </div>
@@ -462,34 +462,45 @@ kaciyan banet jadi fosil`;
 function showReasons(){
 
     const container =
-    document.getElementById("reasonsContainer");
+    document.getElementById(
+    "reasonsContainer"
+    );
 
-    container.innerHTML = "";
+    if(!container) return;
 
-    const reasons = [
+    container.innerHTML="";
+
+    const reasons=[
 
         "Karena kamu suka Sonpy",
 
-        "Karena kamu lucu, cantik, gemesin, baik hati",
+        "Karena kamu cantik, lucu, gemesin, baik hati",
 
         "Karena kamu Adin, dan ga ada adin lain yg kayak kamu"
 
     ];
 
-    reasons.forEach((text,index)=>{
+    reasons.forEach(
+    (text,index)=>{
 
-        setTimeout(()=>{
+    setTimeout(()=>{
 
-            const card =
-            document.createElement("div");
+    const card=
+    document.createElement(
+    "div"
+    );
 
-            card.className = "reason-card";
+    card.className=
+    "reason-card";
 
-            card.innerHTML = text;
+    card.innerHTML=
+    text;
 
-            container.appendChild(card);
+    container.appendChild(
+    card
+    );
 
-        }, index * 700);
+    }, index*600);
 
     });
 
